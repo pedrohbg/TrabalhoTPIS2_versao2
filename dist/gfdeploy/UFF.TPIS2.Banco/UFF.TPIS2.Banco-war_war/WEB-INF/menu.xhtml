@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+        <ui:composition >
+            <h:form id="form_menu">
+                <ul class="nav nav-list">
+                    <li class="">
+                            <h:commandLink action="saque.xhtml">
+                                        <i class="menu-icon fa fa-exchange"></i>
+                                        <span class="menu-text"> Saque </span>
+                            </h:commandLink>
+
+                                <b class="arrow"></b>
+                        </li>					
+                            
+                    <li class="">
+                            <h:commandLink action="transferencias.xhtml">
+                                        <i class="menu-icon fa fa-exchange"></i>
+                                        <span class="menu-text"> Transferências </span>
+                            </h:commandLink>
+
+                                <b class="arrow"></b>
+                        </li>					
+                        <li class="">
+                                <h:commandLink action="pagamentos.xhtml">
+                                        <i class="menu-icon fa fa-credit-card"></i>
+                                        <span class="menu-text"> Pagamentos</span>
+                                </h:commandLink>
+
+                                <b class="arrow"></b>
+                        </li>								
+
+                    <li class="">
+                                <h:commandLink action="opcaocheque.xhtml">
+                                        <i class="menu-icon fa fa-credit-card"></i>
+                                        <span class="menu-text">Cheques</span>
+                                </h:commandLink>
+
+                                <b class="arrow"></b>
+                        </li>								
+
+                        <li class="">
+                                        <h:commandLink action="extratos.xhtml">
+                                        <i class="menu-icon fa fa-file-text-o"></i>
+                                        <span class="menu-text"> Extratos</span>
+                                </h:commandLink>
+
+                                <b class="arrow"></b>
+                        </li>					
+                        <li class="">
+                                <h:commandLink action="investimentos.xhtml">
+                                        <i class="menu-icon fa fa-eur"></i>
+                                        <span class="menu-text"> Investimentos</span>
+                                </h:commandLink>
+
+                                <b class="arrow"></b>
+                        </li>
+                        <li class="">
+                                <h:commandLink action="./index.xhtml">
+                                        <i class="menu-icon fa fa-eur"></i>
+                                        <span class="menu-text">Home</span>
+                                </h:commandLink>
+
+                                <b class="arrow"></b>
+                        </li>
+                </ul><!-- /.nav-list -->
+                </h:form>
+        </ui:composition>
+
+    </body>
+</html>

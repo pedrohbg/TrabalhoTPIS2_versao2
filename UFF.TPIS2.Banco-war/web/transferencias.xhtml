@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+            xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+
+    <body>
+
+        <ui:composition template="./WEB-INF/TempleteBanco.xhtml">
+
+            <ui:define name="content">
+
+              <h4><b> > TRANSFERÊNCIAS </b></h4>
+            <div class="hr" ></div>
+                Insira os dados da Transferência.             
+                <h:form>
+                
+                    <div class="hr"></div>
+		    <label><strong>Banco:</strong>
+                    <input value="" name="codagencia" id="codagencia" size="10" maxlength="10"/></label>
+		<div class="hr"></div>
+		    
+                    
+                    <label><strong>Agência:</strong>
+                    <input value="" name="codagencia" id="codagencia" size="10" maxlength="10"/></label>
+		
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><strong>Conta:</strong>
+                    <input value="" name="codconta" id="codconta" size="20" maxlength="10"/></label>
+		
+	
+		<div class="hr"></div>
+		    
+                	<label><strong>Valor:</strong>
+			<input value="" name="valor" id="valorconta" size="40" maxlength="15"/></label>
+                        
+                <div class="hr"></div>
+		    
+                	<label><strong>Tipo da Tranferência:</strong>
+                            <select name="tipotranferencia">
+                                    <option value="doc">DOC(até R$ 4.999,99)</option>
+                                    <option value="ted">TED (a partir de R$ 500,00)</option>
+                            </select>
+                        </label>
+		        
+                <br></br> <br></br> <br></br> <br></br> <br></br>
+               
+                <center><h:commandButton value="Confirmar Transferência" action="#" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                <h:commandButton value="Cancelar" action="./index.xhtml" /></center>
+                
+                </h:form>
+                
+
+            </ui:define>
+
+        </ui:composition>
+
+
+    </body>
+</html>

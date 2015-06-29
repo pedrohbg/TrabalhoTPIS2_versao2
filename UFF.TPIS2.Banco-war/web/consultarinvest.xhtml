@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/TempleteBanco.xhtml">
+
+            <ui:define name="content">
+              
+            <br></br><br></br><br></br>
+
+            <h:form id="listinvest">
+            <table id="t01" align="" >
+                  <tr>
+                        <th>Data Aniversário</th>
+                        <th>Descrição</th>		
+                        <th>Valor Incial Investido</th>
+                        <th>Valor Atual</th>
+                        <th>Ação</th>
+                        
+                        
+                    </tr>
+                <tr>
+                        <td>12/03/2015</td>
+                         <td>Invest A</td>		
+                         <td>R$ 5.000,00</td>
+                        <td>R$ 7.280,00</td>
+                        <td><h:commandButton value="Resgatar" action="#" /></td>
+                </tr>         
+                <tr>
+                        <td>12/03/2015</td>
+                         <td>Invest B</td>		
+                         <td>R$ 100,00</td>
+                        <td>R$ 170,00</td>
+                        <td><h:commandButton value="Resgatar" action="#" /></td>
+                </tr>         
+                
+                    </table>
+
+                </h:form>
+            
+             <div class="hr"></div>
+		
+                <a href="index.xhtml">Home</a>
+    
+                    
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

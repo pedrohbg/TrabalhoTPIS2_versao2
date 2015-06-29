@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      
+
+    <body>
+
+        <ui:composition template="./WEB-INF/TempleteBanco.xhtml">
+
+            
+            <ui:define name="content">
+            
+                <h4><b> > PAGAMENTOS </b></h4>
+            <div class="hr" ></div>
+	
+                Digite a seqüência numérica localizada junto ao código de barras da conta, ou utilize seu leitor ótico.               
+                <div class="hr"></div>
+                <h:form>
+                
+                <table align="center">
+		<tr>
+			<td width="130" align="center"><span class="acess"><label for="bloco1"></label></span>1 <br /> <input type="text"  value="" size="15" name="p5"  maxlength="12"/></td>
+			<td width="130" align="center"><span class="acess"><label for="bloco2"></label></span>2 <br /> <input type="text"  value="" size="15" name="p5"  maxlength="12"/></td>
+                        <td width="130" align="center"><span class="acess"><label for="bloco3"></label></span>3 <br /> <input type="text" value="" size="15" name="p7" maxlength="12" /></td>
+			<td width="130" align="center"><span class="acess"><label for="bloco4"></label></span>4 <br /> <input type="text" value="" size="15" name="p8" maxlength="12" /></td>
+		</tr>
+	</table>
+	
+		<div class="hr"></div>
+		<p>Informe os dados da conta para continuar o pagamento:</p>
+	
+            <div class="hr" ></div>
+
+                	<label><strong>Cliente / Consumidor:</strong>
+			<input value="Patrick Barreto dos Santos" name="consumidor" id="consumidor" size="45" maxlength="40"/></label>
+		
+            <div class="hr" ></div>
+
+		     <br></br>
+			<label><strong>Valor:</strong>
+			<input value="" name="valor" id="valorconta" size="20" maxlength="10"/></label>
+                        
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><strong>    Vencimento:</strong>
+                    <input value="" name="vencimento" id="vencimento" size="20" maxlength="10"/></label>
+		
+                <br></br> <br></br> <br></br> <br></br> <br></br>
+
+                            <div class="hr" ></div>
+
+                <center><h:commandButton value="Confirmar Pagamento" action="#" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                <h:commandButton value="Cancelar" action="./index.xhtml" /></center>
+                
+                </h:form>
+                
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

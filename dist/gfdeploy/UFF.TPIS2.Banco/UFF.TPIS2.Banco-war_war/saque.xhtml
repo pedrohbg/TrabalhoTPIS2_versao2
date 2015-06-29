@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+            xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+
+
+    <body>
+
+        <ui:composition template="./WEB-INF/TempleteBanco.xhtml">
+
+            <ui:define name="content">
+
+              <h4><b> > SAQUE </b></h4>
+            <div class="hr" ></div>
+                Insira o valor desejado.
+                <h:form id="form"> 
+                
+                    <div class="hr"></div>  
+		    <label><strong>Valor:</strong>
+                        <h:inputText value="#{valorForm.idConta}" /></label>
+                    
+                    <label><h:inputText value="#{valorForm.valor}" />
+                    </label>
+                    <div class="hr"></div>
+		    
+                   
+		        
+                    <br></br> <br></br> <br></br> <br></br>
+
+                    <center><h:commandButton value="Confirmar Saque" action="#{saqueManaged.Saque(valorForm)}" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                   </center>
+
+                </h:form>
+                
+
+            </ui:define>
+
+        </ui:composition>
+
+
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+
+<body>
+
+    <ui:composition template="./WEB-INF/TempleteBanco.xhtml">
+
+    
+        <ui:define name="content">
+
+            <h4><b> > EXTRATROS </b></h4>
+            <div class="hr" ></div>
+		    
+                Escolha o Período. 
+            
+            <h:form id="escolhaperiodo">
+                
+                    <div class="hr"></div>
+		    	<label><strong>Período:</strong>
+                            <select name="periodo1">
+                                    <option value="7">Últimos 7 dias.</option>
+                                    <option value="15">Últimos 15 dias.</option>
+                                    <option value="30">Últimos 30 dias.</option>
+                                    
+                            </select>
+                        </label>
+                    
+                    <div class="hr"></div>
+		    
+                    <label><strong>Data Início:</strong>
+                        <input value="" type="date" name="datainicio" id="datainicio" size="10" maxlength="10"/></label>
+		
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><strong>Data Fim</strong>
+                        <input value="" type="date" name="datafim" id="datafim" size="20" maxlength="10"/></label>
+                        
+                        <center><h:commandButton value="Gerar Extrato" action="#" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                        <h:commandButton value="Cancelar" action="./index.xhtml" /></center>
+		
+            </h:form>
+            <br></br><br></br><br></br>
+            <h:form id="resultado">
+            <table id="t01" align="" >
+                  <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>		
+                        <th>Docto</th>
+                        <th>Valor</th>
+                    </tr>
+                <tr>
+                        <td>12/03/2015</td>
+                         <td>Submarino Comercio Eletr</td>		
+                         <td>503455</td>
+                        <td> -R$ 299,00</td>
+                </tr>         
+                <tr>
+                        <td>15/03/2015</td>
+                         <td>Compra Débito</td>		
+                         <td>504855</td>
+                        <td> -R$ 109,00</td>
+                </tr>         
+                <tr>
+                        <td>16/03/2015</td>
+                         <td>Americanas E-Commerce</td>		
+                         <td>9488459</td>
+                        <td> -R$ 389,00</td>
+                </tr>         
+  
+                <tr>
+                        <td>16/03/2015</td>
+                         <td>Livrarias Saraiva</td>		
+                         <td>9488459</td>
+                        <td>-R$ 35,00</td>
+                </tr>         
+  
+                <tr>
+                        <td>20/03/2015</td>
+                         <td>Depósito em Conta</td>		
+                         <td>359679</td>
+                        <td>R$ 100,00</td>
+                </tr>         
+  
+  
+                    </table>
+
+                </h:form>
+                    
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
