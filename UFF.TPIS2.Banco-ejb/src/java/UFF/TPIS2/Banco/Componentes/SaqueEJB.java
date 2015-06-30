@@ -5,7 +5,9 @@
  */
 package UFF.TPIS2.Banco.Componentes;
 
+import UFF.TPIS2.Banco.Entidades.Cliente;
 import UFF.TPIS2.Banco.Entidades.Conta;
+import java.util.Date;
 import javax.ejb.Stateless;
 import javax.ejb.LocalBean;
 import javax.persistence.EntityManager;
@@ -16,19 +18,31 @@ import javax.persistence.PersistenceContext;
  * @author Pedro
  */
 @Stateless
-@LocalBean
 public class SaqueEJB {
 
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
     
-    public void Saque(long valor, int idConta){
+    public void Saque(long valor, int idConta)
+    {
+        Cliente cliente = new Cliente();
+        cliente.setNome("pedro");
+        cliente.setDataCriacao(new Date());
+        cliente.setDataNascimento(new Date());
+        cliente.setSenha("senha");
+        cliente.setCpf("1236543338i");
         
-        Conta conta = em.find(Conta.class, idConta);
+        em.persist(cliente);
         
-        conta.setSaldo(conta.getSaldo() - valor);
+        //Conta conta = new Conta();
+        //conta.setId(1);
         
-        em.merge(conta);
+        //Conta conta = em.find(Conta.class, idConta);
+        
+        //conta.setSaldo(conta.getSaldo() - valor);
+        
+        //em.merge(conta);
+        
         
     }
 }

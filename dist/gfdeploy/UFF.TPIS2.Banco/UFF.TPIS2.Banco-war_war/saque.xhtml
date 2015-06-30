@@ -21,9 +21,9 @@
                 
                     <div class="hr"></div>  
 		    <label><strong>Valor:</strong>
-                        <h:inputText value="#{valorForm.idConta}" /></label>
+                        <h:inputText value="#{saqueMB.idConta}" /></label>
                     
-                    <label><h:inputText value="#{valorForm.valor}" />
+                    <label><h:inputText value="#{saqueMB.valor}" />
                     </label>
                     <div class="hr"></div>
 		    
@@ -31,7 +31,7 @@
 		        
                     <br></br> <br></br> <br></br> <br></br>
 
-                    <center><h:commandButton value="Confirmar Saque" action="#{saqueManaged.Saque(valorForm)}" />
+                    <center><h:commandButton value="Confirmar Saque" action="#{saqueMB.Saque(saqueMB)}" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                    </center>

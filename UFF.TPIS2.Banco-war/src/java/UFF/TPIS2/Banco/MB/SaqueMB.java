@@ -8,6 +8,7 @@ package UFF.TPIS2.Banco.MB;
 import UFF.TPIS2.Banco.Componentes.SaqueEJB;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
+import javax.inject.Inject;
 
 
 /**
@@ -18,9 +19,8 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name="saqueMB")
 public class SaqueMB {
-
-    @EJB
-    SaqueEJB saqueEJB;
+  @EJB
+  private SaqueEJB saqueEJB;
     
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
@@ -45,8 +45,8 @@ public class SaqueMB {
     }
     
     public void Saque(SaqueMB saqueMB){
-        
-       // saqueEJB.Saque(saqueMB.valor, saqueMB.idConta);
+ //       saqueEJB = new SaqueEJB();
+        saqueEJB.Saque(saqueMB.valor, saqueMB.idConta);
     }
     
   
